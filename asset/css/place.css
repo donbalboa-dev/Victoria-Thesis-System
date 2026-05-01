@@ -1,0 +1,193 @@
+* { margin: 0; padding: 0; box-sizing: border-box; 
+
+}
+body { 
+    font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; 
+    background-image: url('../images/background-image.jpg');
+    background-size: cover;
+
+}
+/* NAVBAR */
+.navbar {
+    background: rgba(81, 81, 81, 0.95);  /* Semi-transparent */
+    backdrop-filter: blur(10px);
+    padding: 0.8rem 10px;  /* ← Smaller padding */
+    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;  /* ← Add small gap */
+}
+
+/* LOGO - Smaller */
+.logo-link {
+    height: 80px;  /* ← Smaller */
+}
+
+.logo-img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+/* NAV TABS - Compact */
+.nav-tabs {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;  /* ← Smaller gap */
+    margin: 0;
+    padding: 20px;
+}
+
+.nav-tabs a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;  /* ← Smaller font */
+    padding: 8px 10px;   /* ← Padding */
+    transition: all 0.3s;
+    border-radius: 8px;
+}
+
+.nav-tabs a:hover {
+    color: #d4a574;
+    background: rgba(212,165,116,0.2);
+}
+
+/* LOGIN BUTTON - Compact */
+.login-btn {
+    background: white;
+    color: #d4a574 !important;
+    padding: 10px 20px;  /* ← Perfect size */
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background: #d4a574;
+    color: white !important; 
+    box-shadow: 0 8px 25px rgba(212,165,116,0.4);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.6rem 2%;
+    }
+    
+    .logo-link {
+        height: 35px;
+    }
+    
+    .nav-tabs {
+        gap: 1rem;
+    }
+    
+    .nav-tabs a {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+    }
+    
+    .login-btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+}
+/* MAIN CONTENT */
+.main-content {
+    margin-top: 80px;
+    min-height: 80vh;
+    padding: 2rem 5%;
+    text-align: center;
+   
+}
+.placeholder {
+    background: white;
+    padding: 4rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+}
+
+
+
+
+/* FOOTER PART */
+.footer {
+    background: #515151;
+    color: #fff;
+    
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 20px;
+}
+
+/* LOGO */
+.footer-logo {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+/* ROW SYSTEM */
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* NAV */
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.footer-links a:hover {
+    color: #d4a574;
+}
+
+/* SOCIALS */
+.socials a {
+    margin-left: 10px;
+    background: #d4a574;
+    padding: 15px;
+    border-radius: 50%;
+    color: white;
+}
+
+/* CONTACT */
+.contact-info {
+    opacity: 0.8;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+/* COPYRIGHT */
+.copyright {
+    font-weight: 500;
+    font-size: 17px;
+    opacity: 0.7;
+}
+
