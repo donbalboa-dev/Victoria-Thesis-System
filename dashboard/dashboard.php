@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if(!isset($_SESSION['admin'])) {
+    header("Location: login-form.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -98,7 +107,7 @@
 
             <!-- LOGOUT -->
             <div class="menu-group">
-                <a href="../costumer-pages/index.php" class="menu-item">
+                <a href="logout.php" class="menu-item">
                     <i class="fas fa-sign-out-alt menu-icon"></i>
                     <span> Logout</span>
                 </a>
@@ -114,7 +123,7 @@
                     <span> Admin</span>
                 </div>
                 <div class="admin-info">
-                    <i class="fas fa-clock"></i>
+                    
                     <span> 2:30 PM</span>
                 </div>
             </div>
@@ -129,7 +138,7 @@
         </main>
     </div>
 
-    <script src="../asset/js/dashboard.js> </script>
+    <script src="../asset/js/dashboard.js"></script>
 
 </body>
 </html>

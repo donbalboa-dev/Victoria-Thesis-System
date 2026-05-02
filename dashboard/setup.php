@@ -1,35 +1,20 @@
 <?php
-include '../config.php';
-?>
-<!DOCTYPE html>
-<html>
-<head><title>Admin Setup</title></head>
-<body>
-<h2>👨‍💼 Admin Setup</h2>
+include '../config.php';  // ← ROOT
 
-<?php
-// Create admins table ONLY
-$sql = "
+mysqli_query($conn, "
     CREATE TABLE IF NOT EXISTS admins (
         id INT AUTO_INCREMENT PRIMARY KEY,
         username VARCHAR(50) UNIQUE NOT NULL,
-        password VARCHAR(255) NOT NULL,
-        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        password VARCHAR(255) NOT NULL
     )
-";
+");
 
-if(mysqli_query($conn, $sql)) {
-    echo "✅ Admins table created<br>";
-} else {
-    echo "❌ Error: " . mysqli_error($conn) . "<br>";
+mysqli_query($conn, "INSERT IGNORE INTO admins (username, password) VALUES ('admin', 'admin123')");
+
+$result = mysqli_query($conn, "SELECT * FROM admins");
+echo "✅ Admins ready:<br>";
+while($row = mysqli_fetch_assoc($result)) {
+    echo "✓ " . $row['username'] . " / " . $row['password'] . "<br>";
 }
-
-// Add default admin
-if(mysqli_query($conn, "INSERT IGNORE INTO admins (username, password) VALUES ('admin', 'admin123')")) {
-    echo "✅ Default admin: <strong>username: admin | password: admin123</strong><br>";
-}
-
-echo "<hr>";
-echo "<a href='login-form.php'><strong>🔐 Test Login Now</strong></a>";
-echo "<br><small>Run once, then DELETE this file!</small>";
+echo "<br><a href='login-form.php'>🔐 Test Login Now</a>";
 ?>

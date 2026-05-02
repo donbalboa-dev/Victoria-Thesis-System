@@ -204,8 +204,8 @@
             </div>
 
             <div class="socials">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/Victoriashouseofsilvanasandpastryboutique"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/victoriashouseofsilvanasph?igsh=MWEydWt5NHhmZGpnYw=="><i class="fab fa-instagram"></i></a>
             </div>
         </div>
 

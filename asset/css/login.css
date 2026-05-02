@@ -39,10 +39,12 @@ body {
 }
 
 .login-logo {
-    font-size: 3rem;
-    color: #d4a574;
-    margin-bottom: 10px;
-    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.login-logo img {
+    width: 80px;   /* adjust mo kung gusto mo mas malaki */
+    height: auto;
 }
 
 .login-title {
@@ -157,3 +159,87 @@ body {
         font-size: 2.5rem;
     }
 }
+
+/* 🔥 ADD THESE STYLES TO YOUR CSS */
+.popup-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7); display: none; align-items: center;
+    justify-content: center; z-index: 1000; backdrop-filter: blur(5px);
+    display: none;
+}
+
+.popup-card {
+    background: white; padding: 35px; border-radius: 20px; max-width: 400px;
+    width: 90%; text-align: center; box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+    animation: popupSlide 0.4s ease-out;
+}
+
+@keyframes popupSlide {
+    from { opacity: 0; transform: translateY(-30px) scale(0.9); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ERROR */
+.popup-error .popup-icon { 
+    color: #ff6b6b; 
+    font-size: 4rem; 
+    margin-bottom: 15px; 
+}
+
+.popup-error .popup-title { 
+    color: #d32f2f; 
+    font-size: 1.4rem; 
+    font-weight: 600; 
+    margin-bottom: 8px; 
+}
+
+.popup-error .popup-message { 
+    color: #666; 
+    margin-bottom: 25px; 
+    font-weight: 500; 
+}
+
+/* SUCCESS */
+.popup-success .popup-icon { 
+    color: #4caf50; 
+    font-size: 4rem; 
+    margin-bottom: 15px; 
+}
+
+.popup-success .popup-title { 
+    color: #2e7d32; 
+    font-size: 1.4rem; 
+    font-weight: 600; 
+    margin-bottom: 8px; 
+}
+
+.popup-success .popup-message { 
+    color: #388e3c;
+     margin-bottom: 25px; 
+     font-weight: 500; 
+}
+
+.popup-btn {
+    padding: 12px 28px; 
+    background: #515151; 
+    color: white; 
+    border: none;
+    border-radius: 25px; 
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 600;
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    font-size: 14px;
+}
+.popup-btn:hover { 
+    background: #404040; 
+}
+
+.popup-success .popup-btn { 
+    background: #4caf50; 
+}
+
+.popup-success .popup-btn:hover { 
+background: #45a049; 
+}
+

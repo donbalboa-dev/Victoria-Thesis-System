@@ -1,15 +1,12 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "silvanas_express";  // ← Your DB name
+$username_db = "root";
+$password_db = "";
+$dbname = "silvanas_express";
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+$conn = mysqli_connect($servername, $username_db, $password_db, $dbname);
 
-// Check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-echo "Connected successfully"; // Test
 ?>
